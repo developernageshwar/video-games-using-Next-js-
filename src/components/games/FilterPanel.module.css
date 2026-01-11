@@ -1,0 +1,111 @@
+.panel {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: 4px;
+  color: var(--color-text-main);
+  height: fit-content;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--color-text-main);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+  /* Hidden by default (desktop) */
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .closeBtn {
+    display: flex;
+    /* Visible on mobile */
+  }
+}
+
+.group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+.sortControl {
+  display: flex;
+  gap: 2px;
+}
+
+.sortBtn {
+  border-radius: 4px 0 0 4px;
+  height: auto;
+  width: 44px;
+}
+
+.sortSelect {
+  flex: 1;
+}
+
+.sortSelect select {
+  border-radius: 0 4px 4px 0;
+}
+
+.clearContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clearBtn {
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .panel {
+    margin-bottom: 2rem;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clearBtn {
+    width: 100%;
+  }
+}

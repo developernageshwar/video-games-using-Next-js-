@@ -1,0 +1,30 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+.select {
+  background-color: var(--color-input-bg);
+  border: none;
+  padding: 0.8rem;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 0;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.select:focus {
+  box-shadow: 0 0 0 1px var(--color-accent);
+}

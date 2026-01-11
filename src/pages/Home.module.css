@@ -1,0 +1,116 @@
+.container {
+  min-height: 100vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem 4rem 4rem;
+}
+
+.filters {
+  align-self: start;
+  position: sticky;
+  top: 100px;
+  z-index: 9999;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.games {
+  flex: 1;
+}
+
+/* Mobile Filter Button (FAB) */
+/* Hidden by default on desktop to preserve layout */
+.mobileActions {
+  display: none;
+}
+
+.mobileFilterBtn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  /* FAB Styles: Visible only on mobile/tablet */
+  .mobileActions {
+    display: block;
+    position: static;
+  }
+
+  .mobileFilterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    z-index: 9990;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    padding: 0;
+    background-color: var(--color-primary, #646cff);
+    /* Fallback to a color if var not set */
+    color: white;
+  }
+
+  /* Modal Styles */
+  .filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    /* Animation logic - hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .filters.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Make the FilterPanel take up appropriate space in modal */
+  .filters>div {
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pageInfo {
+  color: var(--color-text-main);
+  font-size: 0.9rem;
+}
