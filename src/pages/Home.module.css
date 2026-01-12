@@ -24,8 +24,6 @@
   flex: 1;
 }
 
-/* Mobile Filter Button (FAB) */
-/* Hidden by default on desktop to preserve layout */
 .mobileActions {
   display: none;
 }
@@ -41,7 +39,6 @@
     padding: 0 2rem 2rem 2rem;
   }
 
-  /* FAB Styles: Visible only on mobile/tablet */
   .mobileActions {
     display: block;
     position: static;
@@ -62,11 +59,9 @@
     font-size: 1.2rem;
     padding: 0;
     background-color: var(--color-primary, #646cff);
-    /* Fallback to a color if var not set */
     color: white;
   }
 
-  /* Modal Styles */
   .filters {
     position: fixed;
     top: 0;
@@ -80,8 +75,6 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-
-    /* Animation logic - hidden by default */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -92,12 +85,10 @@
     pointer-events: auto;
   }
 
-  /* Make the FilterPanel take up appropriate space in modal */
   .filters>div {
     width: 100%;
-    max-width: 500px;
     max-height: 90vh;
-    overflow-y: auto;
+    overflow-y: visible;
   }
 }
 
@@ -113,4 +104,10 @@
 .pageInfo {
   color: var(--color-text-main);
   font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 0 1rem 2rem 1rem;
+  }
 }

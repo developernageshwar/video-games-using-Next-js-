@@ -24,11 +24,18 @@
   width: 100%;
 }
 
-.input:focus {
-  box-shadow: 0 0 0 1px var(--color-accent);
-}
-
 .input::placeholder {
   color: var(--color-text-main);
   opacity: 0.7;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }

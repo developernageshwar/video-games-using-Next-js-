@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { fetchGames } from "../services/api";
-import Navbar from "../components/layout/Navbar";
-import FilterPanel from "../components/games/FilterPanel";
-import GameList from "../components/games/GameList";
+import { fetchGames } from "@/services/api";
+import Navbar from "@/components/layout/Navbar";
+import FilterPanel from "@/components/games/FilterPanel";
+import GameList from "@/components/games/GameList";
 import styles from "./Home.module.css";
-import Button from "../components/common/Button";
-import useDebounce from "../hooks/useDebounce";
+import Button from "@/components/common/Button";
+import useDebounce from "@/hooks/useDebounce";
 import { FaFilter } from "react-icons/fa";
 
 const Home = () => {
@@ -58,7 +58,6 @@ const Home = () => {
 
   const handleFilterChange = (name, value) => {
     setFilters((prev) => ({ ...prev, [name]: value }));
-    // Page reset is now handled by the effect on debounced values
   };
 
   const handleSortDirectionChange = () => {

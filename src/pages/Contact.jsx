@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/layout/Navbar";
-import Input from "../components/common/Input";
-import TextArea from "../components/common/TextArea";
-import Button from "../components/common/Button"; 
+import Navbar from "@/components/layout/Navbar";
+import Input from "@/components/common/Input";
+import TextArea from "@/components/common/TextArea";
+import Button from "@/components/common/Button";
 import styles from "./Contact.module.css";
 
 const Contact = () => {

@@ -38,7 +38,6 @@
 @media (max-width: 992px) {
   .closeBtn {
     display: flex;
-    /* Visible on mobile */
   }
 }
 
@@ -59,21 +58,22 @@
 
 .sortControl {
   display: flex;
-  gap: 2px;
+  align-items: stretch;
+}
+
+.sortSelect [data-part="trigger"] {
+  border-radius: 0 4px 4px 0 !important;
+  height: 100%;
 }
 
 .sortBtn {
-  border-radius: 4px 0 0 4px;
-  height: auto;
+  border-radius: 4px 0 0 4px !important;
+  height: auto !important;
   width: 44px;
 }
 
 .sortSelect {
   flex: 1;
-}
-
-.sortSelect select {
-  border-radius: 0 4px 4px 0;
 }
 
 .clearContainer {
@@ -107,5 +107,13 @@
 
   .clearBtn {
     width: 100%;
+  }
+
+  .panel {
+    background-color: var(--color-card-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    color: var(--color-text-main);
+    height: fit-content;
   }
 }
